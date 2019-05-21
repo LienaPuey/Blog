@@ -24,16 +24,16 @@ export class DetailComponent implements OnInit {
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
-  timeConverter(date: any) {
-    let a: any = new Date(date * 1000);
-    let months: any = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    let year: any = a.getFullYear();
-    let month: any = months[a.getMonth()];
-    let date: any = a.getDate();
-    let hour: any = a.getHours();
-    let min: any = a.getMinutes();
-    let sec: any = a.getSeconds();
-    let time: any = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  timeConverter(date) {
+    var a: any = new Date(date * 1000);
+    var months: any = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year: any = a.getFullYear();
+    var month: any = months[a.getMonth()];
+    var date: any = a.getDate();
+    var hour: any = a.getHours();
+    var min: any = a.getMinutes();
+    var sec: any = a.getSeconds();
+    var time: any = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     return time;
   }
 }
